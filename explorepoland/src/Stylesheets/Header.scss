@@ -1,0 +1,81 @@
+.headerWrapper{
+    background-image: url(../Photos/tatry.jpg);
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    .mainNavigation{
+        ul{
+            list-style-type: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding-top: 30px;
+            font-size: 22px;
+
+
+            li{
+                width:20vw;
+                letter-spacing: 6px;
+
+                a {
+                    color: inherit;
+                    text-decoration: none;
+                  }
+                  
+                  a {
+                    background:
+                      linear-gradient(
+                        to right,
+                        rgb(71,150,214),
+                        rgb(69,147,211)
+                      ),
+                      linear-gradient(
+                        to right,
+                        rgba(255, 0, 0, 1),
+                        rgba(255, 0, 180, 1),
+                        rgba(0, 100, 200, 1)
+                    );
+                    background-size: 100% 3px, 0 3px;
+                    background-position: 100% 100%, 0 100%;
+                    background-repeat: no-repeat;
+                    transition: background-size 400ms;
+                  }
+                  
+                  a:hover {
+                    background-size: 0 3px, 100% 3px;
+                  }
+                
+            }
+            li#icon{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                span{
+                    margin-left: 10px;
+                }
+            }
+            
+            
+        }
+
+    }
+    .contentWrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+        font-size: 40px;
+        h1{
+            font-family: 'Oleo Script', cursive;
+            margin-bottom: 10px;
+
+        }
+        
+    }
+}
