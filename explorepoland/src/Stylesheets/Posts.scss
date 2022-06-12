@@ -1,0 +1,83 @@
+.postsWrapper{
+    background-color: rgb(10,10,12);
+    height: 100vh;
+
+
+.postsContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    
+    p{
+        width: 45vw;
+        font-size: 18px;
+    }
+    h2{
+        font-weight: lighter;
+        width: 40vw;
+        font-family: 'Nuosu SIL', serif;
+    }
+
+}
+.newestPosts{
+    display: flex;
+    justify-content: center;
+
+    div{
+        margin: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+
+        p{
+            margin-bottom: 20px;
+        }
+        span{
+            padding-top: 10px;
+            font-family: 'Nuosu SIL', serif;
+            background-color:rgb(12,12,14, 0.5);
+            height: 10vh;
+            font-size: 20px;
+        }
+
+        
+        
+    }
+    .postOne{
+        width: 20vw;
+        height: 60vh;
+        background-image: url(../Photos/lot.webp);
+        background-size: cover;
+        background-position: center;
+    }
+    .postTwo{
+        width: 20vw;
+        height: 60vh;
+        background-image: url(../Photos/splyw.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    .postThree{
+        width: 20vw;
+        height: 60vh;
+        background-image: url(../Photos/park.webp);
+        background-size: cover;
+        background-position: center;
+    }
+}
+.seeMore{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+
+    a{
+    text-decoration: none;
+    color: rgb(48,108,178);
+    font-size: 18px;
+    margin-right: 10px;
+    }
+}
+}

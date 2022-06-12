@@ -13,9 +13,9 @@ export default function Header() {
         <ul>
             <li><a href=''>STRONA GŁÓWNA</a></li>
             <li><a href=''>ODKRYWAJ</a></li>
-            <li><MdShareLocation fontSize={"60px"}/></li>
+            <li id='iconLocalization'><MdShareLocation fontSize={"60px"}/></li>
             <li><a href=''>KONTAKT</a></li>
-            <li id='icon'><MdSearch/><span>Szukaj</span></li>
+            <li id='iconSearch'><MdSearch/><span>Szukaj</span></li>
             
         </ul>
     </nav>

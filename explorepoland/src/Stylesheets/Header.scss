@@ -6,6 +6,11 @@
     background-repeat: no-repeat;
     background-position: center;
 
+    overflow-x: hidden;
+  perspective: 1px;
+  perspective-origin: center top;
+  transform-style: preserve-3d;
+
     .mainNavigation{
         ul{
             list-style-type: none;
@@ -50,10 +55,33 @@
                   }
                 
             }
-            li#icon{
+            li#iconSearch{
                 display: flex;
                 justify-content: center;
                 align-items: center;
+            }
+            li#iconLocalization{
+              background:
+                      linear-gradient(
+                        to right,
+                        rgb(71,150,214),
+                        rgb(69,147,211)
+                      ),
+                      linear-gradient(
+                        to right,
+                        rgba(255, 0, 0, 1),
+                        rgba(255, 0, 180, 1),
+                        rgba(0, 100, 200, 1)
+                    );
+                    background-size: 100% 3px, 0 3px;
+                    background-position: 100% 100%, 0 100%;
+                    background-repeat: no-repeat;
+                    transition: background-size 400ms;
+            }
+            li#iconLocalization:hover{
+              background-size: 0 3px, 100% 3px;
+            }
+            
 
                 span{
                     margin-left: 10px;
@@ -62,9 +90,7 @@
             
             
         }
-
-    }
-    .contentWrapper{
+.contentWrapper{
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -76,6 +102,9 @@
             margin-bottom: 10px;
 
         }
-        
+      }
     }
-}
+    
+
+        
+    
