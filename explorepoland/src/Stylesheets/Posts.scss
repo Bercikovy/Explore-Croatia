@@ -1,83 +1,216 @@
-.postsWrapper{
-    background-color: rgb(10,10,12);
-    height: 100vh;
-
-
-.postsContent{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    
-    p{
-        width: 45vw;
-        font-size: 18px;
-    }
-    h2{
-        font-weight: lighter;
-        width: 40vw;
-        font-family: 'Nuosu SIL', serif;
-    }
-
+@mixin postStyles {
+    background-size: cover;
+    background-position: center;
+    width: 20vw;
+    height: 60vh;
 }
-.newestPosts{
-    display: flex;
-    justify-content: center;
 
-    div{
-        margin: 20px;
+@mixin info {
+    font-size: 20px;
+    text-align: center;
+    margin: 0;
+    height: 100%;
+    cursor: help;
+    clip-path: circle(4.5% at 87% 8%);
+    transition: background-color 500ms;
+    padding: 10px;
+}
+
+@mixin icon {
+    position: relative;
+    bottom: 163px;
+    left: 284px;
+    height: 100px;
+}
+
+@mixin iconSvg {
+    font-size: 39px;
+    color: white;
+    background-color: rgb(48, 108, 178);
+    border-radius: 50%;
+}
+
+@mixin infoHover {
+    //TODO Ogarnąć Clip-path
+    background-color: rgb(12, 12, 14, 0.5);
+    clip-path: circle(80%);
+}
+
+
+
+
+
+
+.postsWrapper {
+
+    height: 110vh;
+    padding-top: 100px;
+    background-color: rgb(10, 10, 12);
+    box-shadow: 180px red;
+
+
+
+    .postsContent {
         display: flex;
         flex-direction: column;
-        justify-content: end;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
 
-        p{
-            margin-bottom: 20px;
+        p {
+            width: 45vw;
+            font-size: 18px;
+            text-align: left;
         }
-        span{
-            padding-top: 10px;
+
+        h2 {
             font-family: 'Nuosu SIL', serif;
-            background-color:rgb(12,12,14, 0.5);
-            height: 10vh;
-            font-size: 20px;
+            font-weight: lighter;
+            width: 40vw;
+
+        }
+
+    }
+
+    .newestPosts {
+        display: flex;
+        justify-content: center;
+        text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            margin: 20px;
+
+
+            p {
+                margin-bottom: 20px;
+            }
+
+            span {
+                font-family: 'Nuosu SIL', serif;
+                height: 10vh;
+                font-size: 20px;
+                padding-top: 10px;
+                background-color: rgb(12, 12, 14, 0.5);
+
+            }
+
+
+
+        }
+
+        .postOne {
+            @include postStyles;
+            background-image: url(../Photos/lot.webp);
+
+
+            .info {
+                @include info;
+
+                .icon {
+                    @include icon;
+                }
+
+                .icon svg {
+                    @include iconSvg;
+                }
+
+
+
+            }
+
+            .info:hover {
+                @include infoHover;
+            }
+
+
+        }
+
+        .postTwo {
+            @include postStyles;
+            background-image: url(../Photos/splyw.jpg);
+
+
+            .info {
+                @include info;
+
+                .icon {
+                    @include icon;
+
+                }
+
+                .icon svg {
+                    @include iconSvg;
+                }
+
+            }
+
+            .info:hover {
+                @include infoHover;
+            }
+        }
+
+        .postThree {
+            @include postStyles;
+            background-image: url(../Photos/park.webp);
+
+
+            .info {
+                @include info;
+
+                .icon {
+                    @include icon;
+
+                }
+
+                .icon svg {
+                    @include iconSvg;
+                }
+
+            }
+
+            .info:hover {
+                @include infoHover;
+            }
+        }
+
+        .postFour {
+            @include postStyles;
+            background-image: url(../Photos/kaplica.jpg);
+
+
+            .info {
+                @include info;
+
+                .icon {
+                    @include icon;
+                }
+
+                .icon svg {
+                    @include iconSvg;
+                }
+            }
+
+            .info:hover {
+                @include infoHover;
+            }
+        }
+
+
+    }
+
+    .seeMore {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+
+        button{
+            margin-right: 5px;
         }
 
         
-        
     }
-    .postOne{
-        width: 20vw;
-        height: 60vh;
-        background-image: url(../Photos/lot.webp);
-        background-size: cover;
-        background-position: center;
-    }
-    .postTwo{
-        width: 20vw;
-        height: 60vh;
-        background-image: url(../Photos/splyw.jpg);
-        background-size: cover;
-        background-position: center;
-    }
-    .postThree{
-        width: 20vw;
-        height: 60vh;
-        background-image: url(../Photos/park.webp);
-        background-size: cover;
-        background-position: center;
-    }
-}
-.seeMore{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-
-    a{
-    text-decoration: none;
-    color: rgb(48,108,178);
-    font-size: 18px;
-    margin-right: 10px;
-    }
-}
 }
