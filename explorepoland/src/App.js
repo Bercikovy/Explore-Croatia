@@ -3,6 +3,7 @@ import './App.css';
 import Footer from './Components/Footer';
 import Header from './Components/Header';
 import Posts from './Components/Posts';
+import Form from './Components/Form'
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <header className="App-header">
           <Header/>
           <Posts/>
+          <Form/>
           <Footer/>  
       </header>
     </div>
