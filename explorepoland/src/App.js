@@ -11,7 +11,6 @@ function App() {
       <header className="App-header">
           <Header/>
           <Posts/>
-          <Form/>
           <Footer/>  
       </header>
     </div>
