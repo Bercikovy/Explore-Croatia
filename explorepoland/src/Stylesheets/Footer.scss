@@ -5,8 +5,9 @@
   background-size: cover;
   background-position: center;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
+  flex-direction: column;
 
   .footerWrapper:before {
     opacity: 0.6;

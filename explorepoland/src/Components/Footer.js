@@ -5,7 +5,7 @@ import Form from "./Form";
 
 export default function Footer() {
   return (
-    <section className="footerWrapper parallax"><Form/>
+    <section className="footerWrapper parallax">{/*<Form/>*/}
       <ul>
         <li className="copyright">
           @ 2022 Explore Poland Wszelkie prawa zastrzeżone{" "}
