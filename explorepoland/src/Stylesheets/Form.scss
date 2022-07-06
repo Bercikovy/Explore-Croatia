@@ -1,3 +1,12 @@
+@mixin style{
+    padding: 10px;
+    box-sizing: border-box;
+    border: 4px solid black;
+    background-color: rgb(0, 0, 0, 0.3);
+    color:#fff;
+    outline: none;
+}
+
 .wrapper {
     display: flex;
     flex-direction: column;
@@ -5,58 +14,58 @@
     align-items: center;
     color: white;
     width: 80vw;
+    margin-top: 5vh;
 
     h2 {
-        margin-top: 150px;
+        margin-top: 40px;
     }
-
-    margin-top: 50px;
-    margin-bottom: 50px;
 
     form {
         display: flex;
         flex-direction: column;
         gap: 10px;
         width: 50vw;
-
-
         .inputs {
             display: flex;
-            gap: 10px;
+            gap: 1vw;
+            box-sizing: border-box;
 
             input {
-                box-sizing: border-box;
-                border: 4px solid black;
-                // border-radius: 20px;
-                width: 240px;
-                padding: 10px;
-                background-color: transparent;
-
+                width: 25vw;
+                @include style;
+            
             }
         }
 
         textarea {
-            box-sizing: border-box;
-            border: 4px solid black;
-            // border-radius: 20px;
-            width: 490px;
-            height: 150px;
-            padding: 10px;
-            background-color: transparent;
+
+            width: 51vw;
+            height: 20vw;
             width: 50vw;
+            resize: none;
+            @include style;
+
         }
+        ::placeholder {
+            color: #fff;
+          }
+          
     }
 
     button {
-        background-color: rgb(48, 108, 178);
+        width: 15vw;
+        margin: 0 auto;
+        background-color: rgb(8, 64, 128);
         border: none;
+        box-shadow: 0 0 1em rgb(0, 0, 0);
         color: white;
         padding: 10px;
-        transition: 0.5s;
+        transition: 1s;
+
     }
 
     button:hover {
-        background-color: rgb(8, 64, 128);
+        background-color: rgb(0, 0, 0);
 
     }
 }
