@@ -10,6 +10,7 @@ import { MdOutlineHelpOutline } from "react-icons/md";
 export default function Posts() {
   return (
     <section className="postsWrapper">
+      <div className="postsBorder"></div>
       <div className="postsContent">
         <h2>Oto Propozycja Kilku Atrakcji</h2>
         <p>

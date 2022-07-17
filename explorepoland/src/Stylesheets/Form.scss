@@ -18,6 +18,8 @@
 
     h2 {
         margin-top: 40px;
+        font-family: 'Nuosu SIL', serif;
+        text-shadow: 0 2px 5px rgb(0 0 0 / 70%);
     }
 
     form {
@@ -68,4 +70,36 @@
         background-color: rgb(0, 0, 0);
 
     }
+}
+
+@media only screen and (max-width: 600px) {
+
+
+.wrapper{
+    form{
+        width: 90vw;
+
+
+    .inputs{
+
+        width: 90vw;
+    
+            input{
+                width: 100%;
+            }
+            
+}
+textarea{
+                width: 90vw;
+                height: 40vh;
+            }
+
+button{
+    width: 30vw;
+}
+}
+
+}
+
+
 }

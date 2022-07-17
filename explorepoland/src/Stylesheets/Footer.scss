@@ -1,6 +1,6 @@
 .footerWrapper {
-  background-image: linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.9)), url(../Photos/footer.jpg);
-  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url(https://images.pexels.com/photos/286579/pexels-photo-286579.jpeg);
+  height: auto;
   width: 100vw;
   background-size: cover;
   background-position: center;
@@ -8,6 +8,14 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+
+  .footerBackground{
+    width: 100%;
+    background-image: url(https://www.camping.tools/assets/footer/footer-treeline.png);
+    height: 400px  ;
+    z-index: 20;
+    color: white;
+  }
 
   .footerWrapper:before {
     opacity: 0.6;
@@ -42,4 +50,30 @@
     }
 
   }
+}
+
+@media only screen and (max-width: 600px) {
+
+  .footerWrapper {
+
+
+
+    ul {
+      width: 100%;
+      font-size: 14px;
+      flex-direction: column;
+      margin:0;
+      padding:20px 0 0 0 ;
+
+      li {
+        margin-top: 2px;
+      }
+
+      .copyright {
+        border: 0;
+      }
+    }
+  }
+
+
 }

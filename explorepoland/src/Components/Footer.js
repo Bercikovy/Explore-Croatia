@@ -5,6 +5,7 @@ import Form from "./Form";
 
 export default function Footer() {
   return (
+    <>
     <section className="footerWrapper parallax">
       <Form/>
       <ul>
@@ -12,15 +13,19 @@ export default function Footer() {
           @ 2022 Explore Poland Wszelkie prawa zastrzeżone{" "}
         </li>
         <li>
-          <a href="">Strona Główna</a>
+          <a href="wp.pl">Strona Główna</a>
         </li>
         <li>
-          <a href="">Odkrywaj</a>
+          <a href="wp.pl">Odkrywaj</a>
         </li>
         <li>
-          <a href="">Kontakt</a>
+          <a href="wp.pl">Kontakt</a>
         </li>
       </ul>
+      <div className="footerBackground"></div>
     </section>
+    
+    
+    </>
   );
 }

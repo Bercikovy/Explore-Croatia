@@ -5,6 +5,7 @@
 }
 
 
+
 .headerWrapper {
   background-image: url(../Photos/tatry.jpg);
   width: 100vw;
@@ -17,6 +18,7 @@
   perspective-origin: center top;
   transform-style: preserve-3d;
   box-shadow: inset 0 -150px 9px -20px rgba(0, 0, 0, 0.3);
+  z-index: 20;
 
   .mainNavigation {
 
@@ -132,7 +134,7 @@
 
 
 
-      
+
 
 
       p {
@@ -150,6 +152,7 @@
     }
 
   }
+
 
   .contentWrapper {
     @include flexCenter;
@@ -174,3 +177,75 @@
   }
 
 }
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 756px) {
+
+  .mainNavigation {
+
+    display: none;
+
+  }
+
+  .headerWrapper {
+    height: 70vh
+  }
+
+
+  .contentWrapper {
+
+    height: 70vh !important;
+  }
+
+  .contentWrapper h1,
+  p {
+    font-size: 30px;
+
+  }
+
+  .flexWrapper {
+
+
+    .socialMedia {
+      padding: 5px !important;
+      height: 33vh !important;
+
+      span p {
+        display: none !important;
+      }
+
+
+
+    }
+  }
+}
+
+
+
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+
+
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+
+
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+
+
+
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}

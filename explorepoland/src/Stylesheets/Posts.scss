@@ -18,8 +18,15 @@
 
 @mixin icon {
     position: relative;
-    bottom: 163px;
+    bottom: 130px;
     left: 284px;
+    height: 100px;
+}
+
+@mixin iconMediaQueries {
+    position: relative;
+    bottom: -104px;
+    left: 304px;
     height: 100px;
 }
 
@@ -43,10 +50,19 @@
 
 .postsWrapper {
 
-    height: 110vh;
-    padding-top: 100px;
+    height: auto;
+    padding-top: 0;
     background-color: rgb(10, 10, 12);
     box-shadow: 180px red;
+
+    .postsBorder{
+        background-image: url(https://www.pngall.com/wp-content/uploads/8/Trip-PNG-High-Quality-Image.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100%;
+        height: 700px;
+    }
 
 
 
@@ -208,10 +224,88 @@
         align-items: center;
         margin-top: 10px;
 
-        button{
+        button {
             margin-right: 5px;
         }
 
-        
+
     }
+}
+
+@media only screen and (max-width: 1200px) {
+
+    .postsWrapper {
+
+        height: auto;
+
+
+        .postsContent {
+
+
+            h2 {
+                width: 100%;
+            }
+
+        }
+
+        .newestPosts {
+            flex-direction: column !important;
+
+
+            span {
+                height: auto;
+                padding-bottom: 20px;
+            }
+
+            .postOne,
+            .postTwo,
+            .postThree,
+            .postFour {
+                width: 90vw;
+
+                .info {
+                    display: none;
+                }
+            }
+
+            .postOne .info .icon {
+
+                @include iconMediaQueries;
+
+            }
+
+            .postTwo .info .icon {
+
+                @include iconMediaQueries;
+
+            }
+
+            .postThree .info .icon {
+
+                @include iconMediaQueries;
+
+            }
+
+            .postFour .info .icon {
+
+                @include iconMediaQueries;
+
+            }
+
+            .postOne .info {
+                height: 75%;
+            }
+        }
+
+
+        .postsContent {
+            p {
+                width: 90vw !important;
+                font-family: 'Nuosu SIL', serif;
+                text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+            }
+        }
+
+    }
+
 }
