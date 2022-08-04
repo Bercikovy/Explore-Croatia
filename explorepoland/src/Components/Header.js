@@ -15,19 +15,23 @@ import TextField from "@mui/material/TextField";
 export default function Header() {
   return (
     <section className="headerWrapper parallax">
+      <div className="logo">  
+        <MdShareLocation fontSize={"60px"} />
+          <h1>Explore Poland</h1>
+        </div>
       <nav className="mainNavigation">
         <ul>
           <li>
-            <a href="wp.pl">STRONA GŁÓWNA</a>
+            <a href="/">STRONA GŁÓWNA</a>
           </li>
           <li>
-            <a href="wp.pl">ODKRYWAJ</a>
+            <a href="#Explore">ODKRYWAJ</a>
           </li>
           <li id="iconLocalization">
             <MdShareLocation fontSize={"60px"} />
           </li>
           <li>
-            <a href="wp.pl">KONTAKT</a>
+            <a href="#Contact">KONTAKT</a>
           </li>
           <li id="iconSearch">
             <MdSearch />
@@ -40,7 +44,9 @@ export default function Header() {
           </li>
         </ul>
       </nav>
+      
       <Burger />
+      
       <div className="flexWrapper">
         <div className="socialMedia">
           <span>

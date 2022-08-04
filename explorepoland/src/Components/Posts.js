@@ -9,7 +9,7 @@ import { MdOutlineHelpOutline } from "react-icons/md";
 
 export default function Posts() {
   return (
-    <section className="postsWrapper">
+    <section className="postsWrapper parallax" id="Posts">
       <div className="postsBorder"></div>
       <div className="postsContent">
         <h2>Oto Propozycja Kilku Atrakcji</h2>

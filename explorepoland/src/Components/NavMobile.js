@@ -41,6 +41,7 @@ const Nav = styled.nav`
 }
 
 ul{
+    
     list-style-type:none;
     margin:0;
     padding:0;
@@ -54,7 +55,7 @@ ul{
     transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
     top: 0;
     right: 0;
-    height: 100vh;
+    height: 100%;
     width: 300px;
     padding-top: 3.5rem;
     transition: transform 0.3s ease-in-out;
@@ -89,13 +90,13 @@ function NavMobile({ open }) {
           <h1>Explore Poland</h1>
         </li>
         <li>
-          <a href="wp.pl">STRONA GŁÓWNA</a>
+          <a href="/">STRONA GŁÓWNA</a>
         </li>
         <li>
-          <a href="wp.pl">ODKRYWAJ</a>
+          <a href="#Explore">ODKRYWAJ</a>
         </li>
         <li>
-          <a href="wp.pl">KONTAKT</a>
+          <a href="#Contact">KONTAKT</a>
         </li>
         <li className="iconSearch">
           

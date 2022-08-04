@@ -16,9 +16,8 @@ const StyledBurger = styled.div`
     display: flex;
     justify-content: space-around;
     align-items: center;
-    flex-direction: column;
+    flex-direction: column !important;
     z-index: 20;
-    border-radius: 1px solid white !important;
 
     div {
       display: flex;

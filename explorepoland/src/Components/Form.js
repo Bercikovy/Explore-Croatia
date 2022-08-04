@@ -17,7 +17,7 @@ export default function Form() {
   }
 
   return (
-    <div className='wrapper'>
+    <div className='wrapper' id="Contact">
       <h2>Masz pytanie? Napisz do nas!</h2>
       <form onSubmit={submit}>
         <div className="inputs">

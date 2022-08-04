@@ -3,7 +3,7 @@ import "../Stylesheets/SortFilterSearch.scss";
 
 const SortFilterSearch = () => {
   return (
-    <section className="formWrapper">
+    <section className="formWrapper" id="Explore">
       <h1>WYSZUKAJ ATRAKCJE</h1>
     
       <form className="sort">
@@ -143,55 +143,4 @@ const SortFilterSearch = () => {
 
 
 
-        {/*<input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"></input>
-        <label for="vehicle1"> Dolnośląskie</label><br/>
-        </div>
-        <div className="item">
-        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car"/>
-        <label for="vehicle2">Kujawsko-pomorskie</label><br/>
-        </div>
-        <div className="item">
-        <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat"/>
-        <label for="vehicle3"> Lubelskie </label>
-        </div>
-        <div className="item">
-        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"></input>
-        <label for="vehicle1"> Lubuskie</label><br/>
-        </div>
-        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car"/>
-        </div>
-        <label for="vehicle2">Łódzkie</label><br/>
-        <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat"/>
-        <label for="vehicle3"> Małopolskie </label>
-        <br/>
-        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"></input>
-        <label for="vehicle1"> Mazowieckie</label><br/>
-        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car"/>
-        <label for="vehicle2"> Opolskie</label><br/>
-        <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat"/>
-        <label for="vehicle3"> Podkarpackie </label>
-        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"></input>
-        <label for="vehicle1"> Podlaskie</label><br/>
-        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car"/>
-        <label for="vehicle2"> Pomorskie</label><br/>
-        <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat"/>
-        <label for="vehicle3"> Śląskie </label>
-        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"></input>
-        <label for="vehicle1"> Świętokrzyskie</label><br/>
-        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car"/>
-        <label for="vehicle2"> Warmińsko-mazurskie</label><br/>
-        <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat"/>
-        <label for="vehicle3"> Wielkopolskie </label>
-        <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat"/>
-        <label for="vehicle3"> Zachodniopomorskie </label>
-        */}
         
-  
-  
-        
-        
-      
-      
-
-      
- 

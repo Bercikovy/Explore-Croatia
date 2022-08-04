@@ -14,6 +14,7 @@
     clip-path: circle(4.5% at 87% 8%);
     transition: background-color 500ms;
     padding: 10px;
+    display: none !important;
 }
 
 @mixin icon {
@@ -21,6 +22,7 @@
     bottom: 130px;
     left: 284px;
     height: 100px;
+    
 }
 
 @mixin iconMediaQueries {
@@ -50,19 +52,17 @@
 
 .postsWrapper {
 
-    height: auto;
+    height: 120vh;
     padding-top: 0;
-    background-color: rgb(10, 10, 12);
+   background-image: url(../Photos/posts.jpg);
     box-shadow: 180px red;
+    background-color: #011526;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
 
-    .postsBorder{
-        background-image: url(https://www.pngall.com/wp-content/uploads/8/Trip-PNG-High-Quality-Image.png);
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        width: 100%;
-        height: 700px;
-    }
+    
 
 
 
@@ -72,18 +72,27 @@
         justify-content: center;
         align-items: center;
         width: 100vw;
+        color: white;
+        text-shadow: 0 2px 5px rgba(255, 249, 249, 0.7);
+        padding-top: 100px;
+        
+
 
         p {
-            width: 45vw;
-            font-size: 18px;
-            text-align: left;
+            width: 50%;
+            font-size: 20px;
+            text-align: center;
+            text-shadow: none;
+            font-weight: bold;
+            
+            
         }
 
         h2 {
             font-family: 'Nuosu SIL', serif;
-            font-weight: lighter;
+            font-weight: bold;
             width: 40vw;
-            text-shadow: 0 2px 5px rgba(255, 249, 249, 0.7);
+            text-shadow: none;
 
         }
 
@@ -224,6 +233,13 @@
         align-items: center;
         margin-top: 10px;
 
+        svg{
+            color: white !important;
+        }
+    span{
+        color: white;
+        font-weight: bold;
+    }
         button {
             margin-right: 5px;
         }
@@ -231,12 +247,37 @@
 
     }
 }
+@media only screen and (max-width: 756px) {
+    .newestPosts {
+        
+
+            span {
+                border-bottom-left-radius: 100px ;
+                border-bottom-right-radius: 100px ;
+                width: 250px;
+
+            }
+            .postOne, .postTwo, .postThree, .postFour{
+                border-radius: 600px;
+                align-items: center;
+                height: 350px !important;
+            }
+        }
+
+}
+
+
+
 
 @media only screen and (max-width: 1200px) {
 
     .postsWrapper {
 
         height: auto;
+        background: #005AA7;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #FFFDE4, #005AA7);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #FFFDE4, #005AA7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 
 
         .postsContent {
@@ -244,6 +285,8 @@
 
             h2 {
                 width: 100%;
+                font-size: 35px;
+                border-bottom:  1px solid white;
             }
 
         }
@@ -253,8 +296,9 @@
 
 
             span {
-                height: auto;
+                height: 100%;
                 padding-bottom: 20px;
+                
             }
 
             .postOne,
@@ -307,5 +351,53 @@
         }
 
     }
+
+}
+@media only screen and (min-width: 1201px) and (max-width: 1300px) {
+
+    
+    .postOne, .postTwo, .postThree, .postFour{
+        width: 46% !important;
+        border-radius: 300px;
+        align-items: center;
+    }
+    .seeMore{
+        color: white !important;
+    }
+    .newestPosts{
+        flex-wrap: wrap;
+        justify-content: flex-start !important;
+
+        span{
+            border-bottom-left-radius: 100px ;
+            border-bottom-right-radius: 100px ;
+            width: 300px;
+
+        }
+    }
+}
+@media only screen and (min-width: 1301px){
+
+    .postOne, .postTwo, .postThree, .postFour{
+        width: 20% !important;
+        height:300px !important;
+        border-radius: 300px;
+        align-items: center;
+    }
+    .seeMore{
+        color: white !important;
+    }
+    .newestPosts{
+        flex-wrap: wrap;
+        justify-content: center !important;
+
+        span{
+            border-bottom-left-radius: 110px ;
+            border-bottom-right-radius: 110px ;
+            width: 300px;
+
+        }
+    }
+
 
 }
