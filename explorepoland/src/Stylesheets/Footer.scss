@@ -1,20 +1,26 @@
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
 .footerWrapper {
-  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url(https://images.pexels.com/photos/286579/pexels-photo-286579.jpeg);
+  @include flexCenter;
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url(../Photos/footerbg.jpg);
   height: auto;
   width: 100vw;
   background-size: cover;
   background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
 
-  .footerBackground{
+
+  .footerBackground {
     width: 100%;
-    background-image: url(https://www.camping.tools/assets/footer/footer-treeline.png);
-    height: 400px  ;
-    z-index: 20;
+    height: 400px;
     color: white;
+    background-image: url(https://www.camping.tools/assets/footer/footer-treeline.png);
+    z-index: 20;
   }
 
   .footerWrapper:before {
@@ -25,11 +31,9 @@
 
 
   ul {
-    list-style-type: none;
-    display: flex;
+    @include flexCenter;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    list-style-type: none;
     padding-top: 30px;
     font-size: 22px;
     font-size: 18px;
@@ -62,8 +66,8 @@
       width: 100%;
       font-size: 14px;
       flex-direction: column;
-      margin:0;
-      padding:20px 0 0 0 ;
+      margin: 0;
+      padding: 20px 0 0 0;
 
       li {
         margin-top: 2px;
@@ -74,6 +78,4 @@
       }
     }
   }
-
-
 }

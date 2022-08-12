@@ -1,9 +1,11 @@
 import React from "react";
 import styled from "styled-components";
+import { FaTwitterSquare } from "react-icons/fa";
+import { FaInstagramSquare } from "react-icons/fa";
+import { ImFacebook2 } from "react-icons/im";
+import { FaWhatsappSquare } from "react-icons/fa";
+import { MdLogin } from "react-icons/md";
 import { MdSearch } from "react-icons/md";
-import { MdShareLocation } from "react-icons/md";
-import TextField from "@mui/material/TextField";
-
 
 const Nav = styled.nav`
     width: 100%;
@@ -14,12 +16,39 @@ const Nav = styled.nav`
     justify-content: space-between;
     align-items:center;
 
-    
+    button {
+      @include flexCenter;
+      font-size: 1rem;
+      margin:5px;
+      color: white;
+      font-weight: 400;
+      line-height: 1.5;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      border: 1px solid white;
+      background-color: transparent;
+      padding: 0.375rem 0.75rem;
+      border-radius: 0.25rem;
+      transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 
+      svg {
+        margin-right: 10px;
+      }
+    }
     
+    button:hover {
+      background-color: #212529;
+      color: white;
+    }
+
+    .loginSearch{
+      display:flex;
+      justify-content:center;
+    }
+
    .logo {
 
-   
    display:flex;
    justify-content:center;
    align-items:center;
@@ -31,9 +60,15 @@ const Nav = styled.nav`
 }
 .iconSearch{
     margin: 0 20px 25px 20px;
+    display:flex;
+    justify-content:center;
 
     h1{
        color: white; 
+    }
+
+    li{
+      margin-left:20px;
     }
     
 
@@ -47,7 +82,7 @@ ul{
     padding:0;
 
 
-@media (max-width: 756px){
+@media (max-width: 1128px){
     transform: ${({ open }) => (open ? "translateX(100%)" : "translateX(0%)")}
     flex-flow: column nowrap;
     background-color: #0D2538;
@@ -59,17 +94,16 @@ ul{
     width: 300px;
     padding-top: 3.5rem;
     transition: transform 0.3s ease-in-out;
-
     
-
 }
-@media (min-width: 757px){
+
+@media (min-width: 1128px){
    display:none;
 }
 
     li{
         padding-top:20px;
-        padding-left:0;
+        text-align:center;
     
     
     a{
@@ -86,8 +120,11 @@ function NavMobile({ open }) {
     <Nav open={open}>
       <ul>
         <li className="logo">
-          <MdShareLocation fontSize={"60px"} />
-          <h1>Explore Poland</h1>
+          <img
+            src="https://freesvg.org/img/1631694690croatia-flag-patriotic-symbol.png"
+            alt=""
+          />
+          <h1>Explore Croatia</h1>
         </li>
         <li>
           <a href="/">STRONA GŁÓWNA</a>
@@ -96,20 +133,55 @@ function NavMobile({ open }) {
           <a href="#Explore">ODKRYWAJ</a>
         </li>
         <li>
+          <a href="#Contact">MIASTA</a>
+        </li>
+        <li>
+          <a href="#Contact">NOCLEGI</a>
+        </li>
+        <li>
+          <a href="#Contact">MAPA</a>
+        </li>
+        <li>
+          <a href="#Contact">WSPÓŁPRACA</a>
+        </li>
+        <li>
           <a href="#Contact">KONTAKT</a>
         </li>
         <li className="iconSearch">
-          
-          <span >
+          <li>
+            <a href="wp.pl">
+              <ImFacebook2 color="#4267B2" fontSize="35px" />
+            </a>
+          </li>
+          <li>
+            <a href="wp.pl">
+              <FaInstagramSquare color="#C13584" fontSize="35px" />
+            </a>
+          </li>
+          <li>
+            <a href="wp.pl">
+              <FaTwitterSquare color="#1DA1F2" fontSize="35px" />
+            </a>
+          </li>
+          <li>
+            <a href="wp.pl">
+              <FaWhatsappSquare color="#25D366" fontSize="35px" />
+            </a>
+          </li>
+          </li>
+          <div className="loginSearch">
+        <li><button><MdLogin size="20px" />
+            Zaloguj się
+          </button></li>
+        <li><button className="search">
+            <MdSearch size="20px" />
+            Szukaj
+          </button></li>
+        </div>
         
-            <TextField
-          id="outlined-basic"
-          variant="outlined"
-          fullWidth
-          label="Search"
-        /></span>
-        </li>
+          
       </ul>
+            
     </Nav>
   );
 }

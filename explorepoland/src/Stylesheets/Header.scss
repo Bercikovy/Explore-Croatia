@@ -7,46 +7,104 @@
 
 
 .headerWrapper {
-  background-image: url(../Photos/tatry.jpg);
   width: 100vw;
   height: 100vh;
+  background-image: url(../Photos/tatry.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  overflow-x: hidden;
   perspective: 1px;
   perspective-origin: center top;
   transform-style: preserve-3d;
   box-shadow: inset 0 -150px 9px -20px rgba(0, 0, 0, 0.3);
   z-index: 20;
 
-  .logo{
+  .kAveeV {
+    border: 0;
+  }
+
+  .logo {
     display: none;
   }
 
   .mainNavigation {
-
-    border-bottom: 3px solid white;
+    height: auto;
+    position: sticky;
+    top: 0;
+    z-index: 9030;
 
     ul {
       @include flexCenter;
       list-style-type: none;
       flex-direction: row;
-      padding-top: 30px;
-      font-size: 22px;
+      font-size: 18px;
+      color: black;
+      background-color: white;
+      background-color: rgba(255, 255, 255, 0.15);
+      margin: 0;
+      backdrop-filter: blur(80px);
+      position: sticky;
+      top: 0;
+      z-index: 1030;
+      padding: 0;
+
+      button {
+        @include flexCenter;
+        font-size: 1rem;
+        color: #77878b;
+        border-color: #77878b;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #212529;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+        border: 1px solid #212529;
+        background-color: transparent;
+        padding: 0.375rem 0.75rem;
+        border-radius: 0.25rem;
+        transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+        svg {
+          margin-right: 10px;
+        }
+      }
+
+      button:hover {
+        background-color: #212529;
+        color: white;
+      }
+
+      .search {
+
+        width: auto;
+        height: 38px;
+        margin-left: 0px;
+
+        svg {
+          margin: 0;
+        }
+      }
 
 
 
       li {
-        width: 20vw;
+        width: auto;
         letter-spacing: 6px;
+        padding: 10px;
+
+        img {
+          width: 150px;
+          height: 150px;
+        }
+
+
+
 
         a {
           color: inherit;
           text-decoration: none;
-        }
-
-        a {
+          padding-bottom: 5px;
           background:
             linear-gradient(to right,
               rgb(71, 150, 214),
@@ -55,7 +113,7 @@
               rgba(255, 0, 0, 1),
               rgba(255, 0, 180, 1),
               rgba(0, 100, 200, 1));
-          background-size: 100% 3px, 0 3px;
+          background-size: 100% 1px, 0 1px;
           background-position: 100% 100%, 0 100%;
           background-repeat: no-repeat;
           transition: background-size 400ms;
@@ -108,11 +166,11 @@
 
       display: flex;
       flex-direction: column;
-      height: 30vh;
       align-items: flex-start;
       justify-content: center;
-      box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
       width: 60px;
+      height: 30vh;
+      box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
       border-radius: 20px;
       padding-left: 20px;
 
@@ -161,11 +219,12 @@
   .contentWrapper {
     @include flexCenter;
     flex-direction: column;
+    width: 100%;
     justify-content: center;
     height: 80vh;
     font-size: 40px;
     flex-grow: 1;
-    width: 100%;
+
 
     h1 {
       font-family: 'Oleo Script', cursive;
@@ -184,23 +243,32 @@
 
 
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 756px) {
-  .headerWrapper{
 
-      height: 100vh !important;
+@media only screen and (max-width: 1128px) {
+  .headerWrapper {
 
-    .logo{
+    height: 100vh !important;
+
+    .socialMedia {
+      display: none !important;
+    }
+
+    .logo {
       display: flex;
       align-items: center;
       margin-left: 10px;
 
-      h1{
+      img {
+        width: 100px;
+        height: 100px;
+      }
 
-      
-      font-family: 'Nuosu SIL', serif;
-      margin-left:5px;
-    }
+      h1 {
+
+
+        font-family: 'Nuosu SIL', serif;
+        margin-left: 5px;
+      }
     }
 
   }
@@ -221,8 +289,7 @@
     height: 70vh !important;
   }
 
-  .contentWrapper h1,
-  p {
+  .contentWrapper h1,p {
     font-size: 30px;
 
   }
@@ -245,29 +312,40 @@
 }
 
 
+@media only screen and (min-width: 1129px) and (max-width:1261px) {
+
+  .mainNavigation {
+
+    ul {
+
+      button {
+        font-size: 10px !important;
+        height: 37px;
+      }
+
+      li {
+        font-size: 16px;
+      }
+
+
+      img {
+        width: 100px !important;
+        height: 100px;
+      }
+
+    }
+
+  }
+
+}
+
+@media only screen and (min-width: 756px) and (max-width:1128px) {
+
+.contentWrapper h1 {
+  width: 80vw !important;
+  font-size: 80px;
+}
 
 
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {}
-
-
-
-
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {}
-
-
-
-
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {}
-
-
-
-
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {}
+}

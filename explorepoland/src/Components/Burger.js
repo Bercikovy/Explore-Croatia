@@ -4,10 +4,8 @@ import NavMobile from "./NavMobile";
 
 const StyledBurger = styled.div`
   display: none;
-  
-  
 
-  @media (max-width: 756px) {
+  @media (max-width: 1128px) {
     width: 2rem;
     height: 2rem;
     position: fixed !important;

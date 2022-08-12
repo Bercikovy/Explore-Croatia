@@ -1,0 +1,93 @@
+.attractionWrapper {
+    width: 100%;
+    height: auto;
+    font-family: 'Nuosu SIL', serif;
+    margin-top: 100px;
+    border: 1px solid white;
+    border-radius: 7px;
+    background-color: #262626;
+    
+
+    .photoWrapper { 
+        width: 100%;
+        height: 30vh;
+        background-image: url(https://i0.wp.com/magazyn.travelist.pl/wp-content/uploads/2018/06/4-21.jpg?strip=info&w=1920&ssl=1);
+        background-size: cover;
+        background-repeat: no-repeat;
+       
+
+        .iconWrapper {
+
+            p {
+                display: none;
+                background-color: rgba(12, 12, 14, 0.5);
+                color: white;
+                margin-top: 5px; // TODO "Dodaj przekierowanie ikony na dojazd."
+            }
+
+            a {
+                color: white;
+            }
+
+        }
+
+        .iconWrapper {
+
+
+            a:hover {
+                text-decoration: none;
+                color: #ed191f;
+
+                p {
+                    display: block;
+                    padding: 10px;
+                    font-family: 'Nuosu SIL', serif;
+                }
+            }
+
+        }
+    }
+
+    .content {
+        font-size: 25px;
+        background-color: rgba(12, 12, 14, 0.5);
+
+        p {
+            margin-top: 0;
+            padding-top: 10px;
+
+
+            a {
+                text-decoration: none;
+                color: white;
+            }
+        }
+
+        p:hover {
+            text-decoration: underline;
+        }
+
+
+
+
+        .redColor {
+            color: #ed191f;
+            font-size: 30px;
+        }
+
+        .blueColor {
+            color: #3579C3;
+        }
+
+
+
+    }
+
+
+
+    img {
+        width: 100%;
+        height: 30%;
+        border-radius: 7px;
+    }
+}

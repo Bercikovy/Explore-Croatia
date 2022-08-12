@@ -1,70 +1,13 @@
-@mixin postStyles {
-    background-size: cover;
-    background-position: center;
-    width: 20vw;
-    height: 60vh;
-}
-
-@mixin info {
-    font-size: 20px;
-    text-align: center;
-    margin: 0;
-    height: 100%;
-    cursor: help;
-    clip-path: circle(4.5% at 87% 8%);
-    transition: background-color 500ms;
-    padding: 10px;
-    display: none !important;
-}
-
-@mixin icon {
-    position: relative;
-    bottom: 130px;
-    left: 284px;
-    height: 100px;
-    
-}
-
-@mixin iconMediaQueries {
-    position: relative;
-    bottom: -104px;
-    left: 304px;
-    height: 100px;
-}
-
-@mixin iconSvg {
-    font-size: 39px;
-    color: white;
-    background-color: rgb(48, 108, 178);
-    border-radius: 50%;
-}
-
-@mixin infoHover {
-    //TODO Ogarnąć Clip-path
-    background-color: rgb(12, 12, 14, 0.5);
-    clip-path: circle(80%);
-}
-
-
-
-
-
-
 .postsWrapper {
 
-    height: 120vh;
+    height: auto;
     padding-top: 0;
-   background-image: url(../Photos/posts.jpg);
+    background-image: url(../Photos/posts.jpg);
     box-shadow: 180px red;
     background-color: #011526;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    
-
-    
-
-
 
     .postsContent {
         display: flex;
@@ -75,8 +18,7 @@
         color: white;
         text-shadow: 0 2px 5px rgba(255, 249, 249, 0.7);
         padding-top: 100px;
-        
-
+        background-color: rgba(12, 12, 14, 0.5);
 
         p {
             width: 50%;
@@ -84,8 +26,8 @@
             text-align: center;
             text-shadow: none;
             font-weight: bold;
-            
-            
+
+
         }
 
         h2 {
@@ -100,245 +42,131 @@
 
     .newestPosts {
         display: flex;
-        justify-content: center;
         text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+        height: 100vh;
 
-        div {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            margin: 20px;
-
-
-            p {
-                margin-bottom: 20px;
-            }
-
-            span {
-                font-family: 'Nuosu SIL', serif;
-                height: 10vh;
-                font-size: 20px;
-                padding-top: 10px;
-                background-color: rgb(12, 12, 14, 0.5);
-
-            }
-
-
-
+        .atractionWrapper {
+            width: 20%;
+            height: auto;
+            margin: 0 30px 0 30px;
         }
-
-        .postOne {
-            @include postStyles;
-            background-image: url(../Photos/lot.webp);
-
-
-            .info {
-                @include info;
-
-                .icon {
-                    @include icon;
-                }
-
-                .icon svg {
-                    @include iconSvg;
-                }
-
-
-
-            }
-
-            .info:hover {
-                @include infoHover;
-            }
-
-
-        }
-
-        .postTwo {
-            @include postStyles;
-            background-image: url(../Photos/splyw.jpg);
-
-
-            .info {
-                @include info;
-
-                .icon {
-                    @include icon;
-
-                }
-
-                .icon svg {
-                    @include iconSvg;
-                }
-
-            }
-
-            .info:hover {
-                @include infoHover;
-            }
-        }
-
-        .postThree {
-            @include postStyles;
-            background-image: url(../Photos/park.webp);
-
-
-            .info {
-                @include info;
-
-                .icon {
-                    @include icon;
-
-                }
-
-                .icon svg {
-                    @include iconSvg;
-                }
-
-            }
-
-            .info:hover {
-                @include infoHover;
-            }
-        }
-
-        .postFour {
-            @include postStyles;
-            background-image: url(../Photos/kaplica.jpg);
-
-
-            .info {
-                @include info;
-
-                .icon {
-                    @include icon;
-                }
-
-                .icon svg {
-                    @include iconSvg;
-                }
-            }
-
-            .info:hover {
-                @include infoHover;
-            }
-        }
-
 
     }
 
-    .seeMore {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 10px;
+}
 
-        svg{
-            color: white !important;
-        }
-    span{
+.seeMore {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+
+
+    svg {
+        color: white !important;
+    }
+
+    span {
         color: white;
         font-weight: bold;
     }
-        button {
-            margin-right: 5px;
-        }
 
+    button {
+        margin-right: 5px;
+    }
+
+
+}
+
+@media only screen and (max-width: 756px) {
+    
+    .newestPosts {
+        height: auto !important;
+
+        flex-direction: column;
+        align-items: center;
+
+        .atractionWrapper {
+            width: 80% !important;
+
+            .content p {
+                font-size: 18px;
+
+                .redColor {
+                    font-size: 20px;
+                }
+            }
+        }
 
     }
-}
-@media only screen and (max-width: 756px) {
-    .newestPosts {
-        
 
-            span {
-                border-bottom-left-radius: 100px ;
-                border-bottom-right-radius: 100px ;
-                width: 250px;
+    .postsContent {
 
-            }
-            .postOne, .postTwo, .postThree, .postFour{
-                border-radius: 600px;
-                align-items: center;
-                height: 350px !important;
-            }
+
+        h2 {
+            width: 100% !important;
+            font-size: 35px;
+            border-bottom: 1px solid white;
         }
 
+        p {
+            width: 80% !important;
+            text-align: center !important;
+            font-size: 18px !important;
+        }
+    }
+
+
+
 }
 
 
 
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (min-width: 757px) and (max-width: 1400px) {
+
+    .newestPosts {
+        height: auto !important;
+        flex-wrap: wrap;
+        justify-content: space-around !important;
+
+        .atractionWrapper {
+            width: 40% !important;
+            height: auto;
+            margin: 0 30px 0 30px;
+        }
+    }
 
     .postsWrapper {
 
-        height: auto;
-        background: #005AA7;  /* fallback for old browsers */
-        background: -webkit-linear-gradient(to right, #FFFDE4, #005AA7);  /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to right, #FFFDE4, #005AA7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        height: auto !important;
 
-
-
+        
         .postsContent {
 
 
             h2 {
                 width: 100%;
                 font-size: 35px;
-                border-bottom:  1px solid white;
+                border-bottom: 1px solid white;
+            }
+
+            p {
+                width: 80%;
             }
 
         }
 
         .newestPosts {
-            flex-direction: column !important;
-
+            height: auto;
+            flex-wrap: wrap;
 
             span {
                 height: 100%;
                 padding-bottom: 20px;
-                
-            }
-
-            .postOne,
-            .postTwo,
-            .postThree,
-            .postFour {
-                width: 90vw;
-
-                .info {
-                    display: none;
-                }
-            }
-
-            .postOne .info .icon {
-
-                @include iconMediaQueries;
 
             }
 
-            .postTwo .info .icon {
-
-                @include iconMediaQueries;
-
-            }
-
-            .postThree .info .icon {
-
-                @include iconMediaQueries;
-
-            }
-
-            .postFour .info .icon {
-
-                @include iconMediaQueries;
-
-            }
-
-            .postOne .info {
-                height: 75%;
-            }
         }
 
 
@@ -351,53 +179,5 @@
         }
 
     }
-
-}
-@media only screen and (min-width: 1201px) and (max-width: 1300px) {
-
-    
-    .postOne, .postTwo, .postThree, .postFour{
-        width: 46% !important;
-        border-radius: 300px;
-        align-items: center;
-    }
-    .seeMore{
-        color: white !important;
-    }
-    .newestPosts{
-        flex-wrap: wrap;
-        justify-content: flex-start !important;
-
-        span{
-            border-bottom-left-radius: 100px ;
-            border-bottom-right-radius: 100px ;
-            width: 300px;
-
-        }
-    }
-}
-@media only screen and (min-width: 1301px){
-
-    .postOne, .postTwo, .postThree, .postFour{
-        width: 20% !important;
-        height:300px !important;
-        border-radius: 300px;
-        align-items: center;
-    }
-    .seeMore{
-        color: white !important;
-    }
-    .newestPosts{
-        flex-wrap: wrap;
-        justify-content: center !important;
-
-        span{
-            border-bottom-left-radius: 110px ;
-            border-bottom-right-radius: 110px ;
-            width: 300px;
-
-        }
-    }
-
 
 }

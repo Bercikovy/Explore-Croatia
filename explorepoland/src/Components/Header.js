@@ -1,7 +1,8 @@
 import React from "react";
 import "../Stylesheets/Header.scss";
-import { MdShareLocation } from "react-icons/md";
 import { MdSearch } from "react-icons/md";
+import { MdHome } from "react-icons/md";
+import { MdLogin } from "react-icons/md";
 import "./Fonts/Fonts.scss";
 import "../Stylesheets/Classes.scss";
 import { ImFacebook2 } from "react-icons/im";
@@ -10,43 +11,63 @@ import { FaInstagramSquare } from "react-icons/fa";
 import { AiFillGoogleSquare } from "react-icons/ai";
 import { FaWhatsappSquare } from "react-icons/fa";
 import Burger from "./Burger";
-import TextField from "@mui/material/TextField";
 
 export default function Header() {
   return (
     <section className="headerWrapper parallax">
-      <div className="logo">  
-        <MdShareLocation fontSize={"60px"} />
-          <h1>Explore Poland</h1>
-        </div>
+      <div className="logo">
+        <img
+          src="https://freesvg.org/img/1631694690croatia-flag-patriotic-symbol.png"
+          alt=""
+        />
+        <h1>Explore Croatia</h1>
+      </div>
       <nav className="mainNavigation">
         <ul>
           <li>
-            <a href="/">STRONA GŁÓWNA</a>
+            <img
+              src="https://freesvg.org/img/1631694690croatia-flag-patriotic-symbol.png"
+              alt=""
+            />
+          </li>
+
+          <li>
+            <a href="/">
+              <MdHome />
+            </a>
           </li>
           <li>
             <a href="#Explore">ODKRYWAJ</a>
           </li>
-          <li id="iconLocalization">
-            <MdShareLocation fontSize={"60px"} />
+          <li>
+            <a href="#Explore">MIASTA</a>
           </li>
+          <li>
+            <a href="#Explore">NOCLEGI</a>
+          </li>
+
           <li>
             <a href="#Contact">KONTAKT</a>
           </li>
-          <li id="iconSearch">
-            <MdSearch />
-            <span><TextField
-          id="outlined-basic"
-          variant="outlined"
-          fullWidth
-          label="Search"
-        /></span>
+          <li>
+            <a href="#Map">MAPA</a>
           </li>
+          <li>
+            <a href="#Cooperation">WSPÓŁPRACA</a>
+          </li>
+          <button>
+            <MdLogin size="20px" />
+            Zaloguj się
+          </button>
+          <button className="search">
+            <MdSearch size="20px" />
+            Szukaj
+          </button>
         </ul>
       </nav>
-      
+
       <Burger />
-      
+
       <div className="flexWrapper">
         <div className="socialMedia">
           <span>
@@ -82,8 +103,8 @@ export default function Header() {
         </div>
 
         <div className="contentWrapper">
-          <h1>ODKRYJ ATRAKCJE W POLSCE</h1>
-          <p>Polska jest piękna!</p>
+          <h1>EXPLORE CROATIA<br></br>ODKRYJ ATRAKCJE W CHORWACJI</h1>
+          <p>Chorwacja jest piękna!</p>
         </div>
       </div>
     </section>
