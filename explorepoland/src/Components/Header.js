@@ -1,8 +1,7 @@
 import React from "react";
+
 import "../Stylesheets/Header.scss";
-import { MdSearch } from "react-icons/md";
-import { MdHome } from "react-icons/md";
-import { MdLogin } from "react-icons/md";
+
 import "./Fonts/Fonts.scss";
 import "../Stylesheets/Classes.scss";
 import { ImFacebook2 } from "react-icons/im";
@@ -11,6 +10,7 @@ import { FaInstagramSquare } from "react-icons/fa";
 import { AiFillGoogleSquare } from "react-icons/ai";
 import { FaWhatsappSquare } from "react-icons/fa";
 import Burger from "./Burger";
+import MainNavigation from "./MainNavigation";
 
 export default function Header() {
   return (
@@ -22,49 +22,7 @@ export default function Header() {
         />
         <h1>Explore Croatia</h1>
       </div>
-      <nav className="mainNavigation">
-        <ul>
-          <li>
-            <img
-              src="https://freesvg.org/img/1631694690croatia-flag-patriotic-symbol.png"
-              alt=""
-            />
-          </li>
-
-          <li>
-            <a href="/">
-              <MdHome />
-            </a>
-          </li>
-          <li>
-            <a href="#Explore">ODKRYWAJ</a>
-          </li>
-          <li>
-            <a href="#Explore">MIASTA</a>
-          </li>
-          <li>
-            <a href="#Explore">NOCLEGI</a>
-          </li>
-
-          <li>
-            <a href="#Contact">KONTAKT</a>
-          </li>
-          <li>
-            <a href="#Map">MAPA</a>
-          </li>
-          <li>
-            <a href="#Cooperation">WSPÓŁPRACA</a>
-          </li>
-          <button>
-            <MdLogin size="20px" />
-            Zaloguj się
-          </button>
-          <button className="search">
-            <MdSearch size="20px" />
-            Szukaj
-          </button>
-        </ul>
-      </nav>
+      <MainNavigation/>
 
       <Burger />
 

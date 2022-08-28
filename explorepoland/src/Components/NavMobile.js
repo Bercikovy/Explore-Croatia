@@ -170,7 +170,7 @@ function NavMobile({ open }) {
           </li>
           </li>
           <div className="loginSearch">
-        <li><button><MdLogin size="20px" />
+        <li><button ><MdLogin size="20px" />
             Zaloguj się
           </button></li>
         <li><button className="search">

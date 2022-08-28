@@ -9,7 +9,7 @@ function Atraction() {
     <div className="attractionWrapper">
       <div className="photoWrapper">
         <span className="iconWrapper">
-          <a href="/">
+          <a href="https://goo.gl/maps/kM4y6ng975qgbr8m9" target="_blank">
             <FaMapMarkedAlt size="50" />
             <p>Sprawdź jak dojechać</p>
           </a>

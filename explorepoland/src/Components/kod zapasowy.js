@@ -90,3 +90,20 @@ div {
     }
 
 
+
+
+
+
+
+    useEffect(() => {
+      window.addEventListener("scroll", (event) => {
+        console.log("dupa");
+        if (window.scrollY > 100) {
+          console.log(window.scrollY);
+          setBackToTopArrow(true);
+        } else {
+          setBackToTopArrow(false);
+        }
+      });
+    }, []);
+
