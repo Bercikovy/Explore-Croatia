@@ -1,5 +1,6 @@
 import "./App.css";
 import Arrow from "./Components/Arrow";
+import Filter from "./Components/Filter";
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
 import Posts from "./Components/Posts";
@@ -20,6 +21,7 @@ function App() {
         <Header />
         <Posts />
         <Footer />
+        <Filter/>
         
       </header>
     </div>
