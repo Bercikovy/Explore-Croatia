@@ -1,4 +1,4 @@
-.formWrapper{
+.formWrapper {
     height: auto;
     width: 100%;
     display: flex;
@@ -6,52 +6,53 @@
     align-items: center;
     background-image: url(../Photos/FormBackground.jpg);
 
-    h1{
+    h1 {
         font-family: 'Nuosu SIL', serif;
         text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
         width: 100%;
-        
+
     }
 
 
-    .sort{
-    background-color: rgba(255, 255, 255, .15);  
-    backdrop-filter: blur(5px);
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    padding: 20px 0 20px 0;
+    .sort {
+        background-color: rgba(255, 255, 255, .15);
+        backdrop-filter: blur(5px);
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 20px 0 20px 0;
 
-    h1{
-        text-align: center;
-        width: 20%;
-        margin: 0 0 10px;
-        font-family: 'Nuosu SIL', serif;
-    }
-    
+        h1 {
+            text-align: center;
+            width: 20%;
+            margin: 0 0 10px;
+            font-family: 'Nuosu SIL', serif;
+        }
 
-    input{
-        height: 50px;
-        width: 20%;
+
+        input {
+            height: 50px;
+            width: 20%;
+        }
     }
-    }
-    .header{
-        background-color: rgba(255, 255, 255, .15);  
+
+    .header {
+        background-color: rgba(255, 255, 255, .15);
         backdrop-filter: blur(5px);
         width: 100%;
-        
-        p{
-        font-family: 'Nuosu SIL', serif;
-        margin-bottom: 20px;
-        
-    }
+
+        p {
+            font-family: 'Nuosu SIL', serif;
+            margin-bottom: 20px;
+
+        }
     }
 
 
-    .filter{
-        background-color: rgba(255, 255, 255, .15);  
+    .filter {
+        background-color: rgba(255, 255, 255, .15);
         backdrop-filter: blur(5px);
         width: 100%;
         height: 10%;
@@ -60,25 +61,26 @@
         align-items: center;
         flex-wrap: wrap;
 
-        
 
-        .item{
+
+        .item {
             display: flex;
             align-items: center;
             font-size: 20px;
             flex-direction: row;
             padding-left: 10px;
 
-            input{
+            input {
                 width: 20px;
                 height: 20px;
-                
+
             }
         }
     }
-    .weather{
 
-        background-color: rgba(255, 255, 255, .15);  
+    .weather {
+
+        background-color: rgba(255, 255, 255, .15);
         backdrop-filter: blur(5px);
         width: 100%;
         height: 5%;
@@ -88,28 +90,29 @@
         flex-wrap: wrap;
 
 
-        
 
-        .item{
+
+        .item {
             display: flex;
             align-items: center;
             font-size: 20px;
             flex-direction: row;
             padding-left: 10px;
 
-            input{
+            input {
                 height: 20px;
                 width: 20px;
             }
 
-            label{
+            label {
                 padding-left: 5px;
             }
         }
-        
+
     }
-    .length{
-        background-color: rgba(255, 255, 255, .15);  
+
+    .length {
+        background-color: rgba(255, 255, 255, .15);
         backdrop-filter: blur(5px);
         width: 100%;
         height: 5%;
@@ -119,37 +122,36 @@
         flex-wrap: wrap;
         padding-bottom: 30px;
 
-        input{
+        input {
             width: 20px;
             height: 20px;
         }
 
-        label{
+        label {
             font-size: 20px;
         }
     }
 
 }
+
 @media only screen and (max-width: 756px) {
-    .filter{
+    .filter {
         height: auto !important;
         justify-content: flex-start !important;
 
 
-        .item{
+        .item {
             width: 45%;
-            text-align: left;    
+            text-align: left;
         }
     }
-    .sort{
+
+    .sort {
 
 
-        input{
+        input {
             width: 80% !important;
         }
     }
 
 }
-
-
-    

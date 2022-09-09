@@ -1,25 +1,26 @@
 .scrollTop {
-    position: fixed;
-    bottom: 0px;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
-    cursor: pointer;
-    animation: fadeIn 0.3s;
-    transition: opacity 0.4s;
+  position: fixed;
+  bottom: 0px;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  cursor: pointer;
+  animation: fadeIn 0.3s;
+  transition: opacity 0.4s;
+  opacity: 0.5;
+  overflow-y: auto;
+}
+
+.scrollTop:hover {
+  opacity: 1;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
     opacity: 0.5;
-    overflow-y: auto;
   }
-  
-  .scrollTop:hover{
-    opacity: 1;
-  }
-  
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 0.5;
-    }
-  }
+}

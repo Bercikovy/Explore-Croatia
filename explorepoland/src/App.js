@@ -1,28 +1,20 @@
 import "./App.css";
 import Arrow from "./Components/Arrow";
+import Burger from "./Components/Burger";
 import Filter from "./Components/Filter";
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
 import Posts from "./Components/Posts";
 
-
-
-
-
-
-
 function App() {
-
-  
   return (
     <div className="App">
       <header className="App-header">
-        <Arrow/>
+        <Arrow />
         <Header />
         <Posts />
         <Footer />
-        <Filter/>
-        
+        <Filter />
       </header>
     </div>
   );

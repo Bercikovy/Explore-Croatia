@@ -2,11 +2,12 @@ import React from "react";
 import "../Stylesheets/Atraction.scss";
 import StarRating from "./StarRating";
 import { FaMapMarkedAlt } from "react-icons/fa";
+import "../Stylesheets/hover.css";
 <script async src="//jsfiddle.net/yz4r8jzc/embed/"></script>;
 
 function Atraction() {
   return (
-    <div className="attractionWrapper">
+    <div className="attractionWrapper hvr-grow-rotate">
       <div className="photoWrapper">
         <span className="iconWrapper">
           <a href="https://goo.gl/maps/kM4y6ng975qgbr8m9" target="_blank">
@@ -16,11 +17,11 @@ function Atraction() {
         </span>
       </div>
 
-      <div className="content">
+      <div className="content  ">
         <p>
           <a href="/">
-            <span className="redColor">Dubrovnik</span>- miasto pełne{" "}
-            <span className="blueColor">niezwykłych zabytków</span>
+            <span className="redColor">Dubrovnik</span>{" "}
+            <span>miasto pełne niezwykłych zabytków</span>
           </a>
         </p>
         <StarRating />

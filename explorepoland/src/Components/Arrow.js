@@ -1,42 +1,34 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { AiOutlineArrowUp } from "react-icons/ai";
 import "../Stylesheets/Arrow.scss";
 
-function Arrow() {
-  const [backToTopArrow, setBackToTopArrow] = useState(false);
+const Arrow = () => {
+  const [showScroll, setShowScroll] = useState(false);
 
-  const handleScroll = (event) => {
-    console.log('A key was pressed');
+  const checkScroll = () => {
+    if (!showScroll && window.pageYOffset > 0) {
+      setShowScroll(true);
+    } else if (showScroll && window.pageYOffset <= 1) {
+      setShowScroll(false);
+    }
   };
 
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-
-    // cleanup this component
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
-const scroll = () =>{
-    
-  
-   const offset=  window.pageYOffset;
-    console.log(offset);
-
+  const scrollTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  window.addEventListener("scroll", checkScroll);
 
-
+  console.log(window.pageYOffset);
 
   return (
-    <div className="arrowWrapper">
-      
-      {backToTopArrow && (
-        <AiOutlineArrowUp onClick={scroll} size={60} className="scrollTop" />
-      )}
-    </div>
+    <AiOutlineArrowUp
+      onClick={scrollTop}
+      size={60}
+      className="scrollTop"
+      style={{ display: showScroll ? "flex" : "none" }}
+    />
   );
 };
 export default Arrow;

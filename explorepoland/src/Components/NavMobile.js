@@ -80,6 +80,7 @@ ul{
     list-style-type:none;
     margin:0;
     padding:0;
+    z-index: 19;
 
 
 @media (max-width: 1128px){
@@ -168,20 +169,22 @@ function NavMobile({ open }) {
               <FaWhatsappSquare color="#25D366" fontSize="35px" />
             </a>
           </li>
+        </li>
+        <div className="loginSearch">
+          <li>
+            <button>
+              <MdLogin size="20px" />
+              Zaloguj się
+            </button>
           </li>
-          <div className="loginSearch">
-        <li><button ><MdLogin size="20px" />
-            Zaloguj się
-          </button></li>
-        <li><button className="search">
-            <MdSearch size="20px" />
-            Szukaj
-          </button></li>
+          <li>
+            <button className="search">
+              <MdSearch size="20px" />
+              Szukaj
+            </button>
+          </li>
         </div>
-        
-          
       </ul>
-            
     </Nav>
   );
 }

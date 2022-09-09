@@ -16,7 +16,7 @@ export default function Footer() {
             <a href="wp.pl">Strona Główna</a>
           </li>
           <li>
-            <a href="wp.pl" >Odkrywaj</a>
+            <a href="wp.pl">Odkrywaj</a>
           </li>
           <li>
             <a href="wp.pl">Miasta</a>
@@ -34,7 +34,7 @@ export default function Footer() {
             <a href="wp.pl">Współpraca</a>
           </li>
         </ul>
-        <div className="footerBackground"></div>  
+        <div className="footerBackground"></div>
       </section>
     </>
   );

@@ -11,6 +11,7 @@ import { AiFillGoogleSquare } from "react-icons/ai";
 import { FaWhatsappSquare } from "react-icons/fa";
 import Burger from "./Burger";
 import MainNavigation from "./MainNavigation";
+import "../Stylesheets/hover.css";
 
 export default function Header() {
   return (
@@ -22,7 +23,7 @@ export default function Header() {
         />
         <h1>Explore Croatia</h1>
       </div>
-      <MainNavigation/>
+      <MainNavigation />
 
       <Burger />
 
@@ -60,8 +61,10 @@ export default function Header() {
           </span>
         </div>
 
-        <div className="contentWrapper">
-          <h1>EXPLORE CROATIA<br></br>ODKRYJ ATRAKCJE W CHORWACJI</h1>
+        <div className="contentWrapper hvr-wobble-skew">
+          <h1>
+            EXPLORE CROATIA<br></br>ODKRYJ ATRAKCJE W CHORWACJI
+          </h1>
           <p>Chorwacja jest piękna!</p>
         </div>
       </div>

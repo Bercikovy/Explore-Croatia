@@ -1,114 +1,128 @@
-.filterWrapper{
+.filterWrapper {
     width: 100%;
     height: auto;
-    background-image: url(https://pixabay.com/get/g877e6802d8fff66c95e8df58c98eaa185eb006b727e68c462d031ab80978467139ba80dac7a7781080a893705c5e4690305dd4d597182b7d10fa7ce5681347b4d49830445496d61e71aa7946194b8995_1920.jpg);
+    background-image: url(../Photos/filterbg.jpg);
     background-size: cover;
     background-position: center;
-    
 
-    .optionsWrapper{
+
+    .optionsWrapper {
         display: flex;
         flex-direction: row;
         justify-content: center;
+        cursor: grab;
 
-        p{
+        p {
             padding: 20px;
             font-family: 'Nuosu SIL', serif;
         }
-        p:first-child{
+
+        p:first-child {
             border-right: 1px solid white;
         }
     }
-    .categoryWrapper{
+
+    .categoryWrapper {
         display: flex;
         width: 100%;
         flex-direction: column;
         justify-content: center;
         align-items: center;
 
-        div{
+
+        div {
             width: 80vw;
             height: 200px;
             margin: 30px;
-            background: #aa4b6b;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            background: #aa4b6b;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
             border-radius: 20px;
-            
-            span{
-                color:white;
+
+            span {
+                color: white;
                 font-size: 20px;
                 padding: 15px;
                 font-family: 'Nuosu SIL', serif;
                 font-weight: bold;
-                
+
             }
-            .flexWrapper{
-                    display: flex;
-                    flex-direction: column;
-                    font-size: 25px;
-                    justify-content: flex-start;
-                    align-items: flex-start;
 
-                    
-                }
-        }
-        .item1{
-            background-image: url(https://pixabay.com/get/g2ddd523f5e7152ecca7d5b6f27fd41dd60b5ac7102d9e4c60ca11b83a0dd9b6a576491a999c25c992e191fefe311a0b5c7f2f2f703da8969f887231dc1ff36f235b6abaa7e3a5b7dd8e37e03c6c22064_640.jpg);
-            background-size: cover;
-        }
-        .item2{
-            background-image: url(https://pixabay.com/get/g9b58d160c3c36ad9b194760f6aef41e9786138086d35c6736c7ec137687bf0fb5f3762c2637cb0cf6625e66521be6aa66f608ee46c1b6d4a9d57ddf7c4cc9a799afb559e54c0ce10f3a8dad211a0312c_640.jpg);
-            background-size: cover;
-        }
-        .item3{
-            background-image: url(https://pixabay.com/get/gb6c8f1efb260d231447e63bad249210d8f7c83306e09a7426e9ce1b655b2deed765878b02e67427722f43a8715a3f0d6b13f0411896bd429c70d5bea70e510ab9d9c4d28a6c4c68d69d7bd9264fc643c_640.jpg);
-            background-size: cover;
-        }
-        .item4{
-            background-image: url(https://pixabay.com/get/g2f901cdfb9281ed6ebe4795c5fa4d67e4c43bb429ba99e2c51493413fdf545abc44e3cc8dcdb6f4e8e4fc2d0037c21c6898c4bb7ce5a5fb80487a2dfb6cfb471ab3e1299d26e983d1f7a22bbe682d1a7_640.jpg);
-            background-size: cover;
-        }
-        .item5{
-            background-image: url(https://pixabay.com/get/gd629dabc58da652fc2f89486c489e14a83d897e57e30be95c9a1777446eab3475d5ffa9ef134f2ccddaa34929a015b7777bc356611540b06cd1801ccca3d3047fb453f68a515c715e09a222b483399d6_640.jpg);
-            background-size: cover;
-        }
+            .flexWrapper {
+                display: flex;
+                flex-direction: column;
+                font-size: 25px;
+                justify-content: flex-start;
+                align-items: flex-start;
 
 
-
-        
-    }
-@media only screen and (min-width: 756px) {
-
-    .categoryWrapper{
-        flex-direction: row !important;
-        flex-wrap: wrap;
-        
-    
-        div {
-            width: 40vw !important;
-            height: 400px;
-          
-
-         } 
-    }
-        .flexWrapper{
-                
-                font-size: 50px !important;
-                height: 100% !important;
-                justify-content: center !important;
-
-                span{
-            color:white;
-            font-size: 35px !important;
-            padding: 15px;
-            font-family: 'Nuosu SIL', serif;
-            font-weight: bold;
-            
-                    }
             }
-        
+        }
 
+        .item1 {
+            background-image: url(../Photos/trekking.jpg);
+            background-size: cover;
+        }
+
+        .item2 {
+            background-image: url(../Photos/cities.jpg);
+            background-size: cover;
+        }
+
+        .item3 {
+            background-image: url(../Photos/plaze.jpg);
+            background-size: cover;
+        }
+
+        .item4 {
+            background-image: url(../Photos/fun.jpg);
+            background-size: cover;
+        }
+
+        .item5 {
+            background-image: url(../Photos/hotel.jpg);
+            background-size: cover;
+        }
+
+
+
+
+    }
+
+    @media only screen and (min-width: 756px) {
+
+        .categoryWrapper {
+            flex-direction: row !important;
+            flex-wrap: wrap;
+
+
+            div {
+                width: 40vw !important;
+                height: 400px;
+
+
+            }
+        }
+
+        .flexWrapper {
+
+            font-size: 50px !important;
+            height: 100% !important;
+            justify-content: center !important;
+
+            span {
+                color: white;
+                font-size: 35px !important;
+                padding: 15px;
+                font-family: 'Nuosu SIL', serif;
+                font-weight: bold;
+
+            }
+        }
+
+
+    }
 }
-}
-    
